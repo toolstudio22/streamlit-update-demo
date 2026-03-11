@@ -1,63 +1,39 @@
-# Streamlit 1.55.0 Demo App
+# streamlit-update-demo
 
-Streamlit 1.55.0 の新機能を体感できるサンプルアプリです。
+Streamlit のアップデート検証デモを、バージョンごとのフォルダで管理するリポジトリです。
 
-リリースノートで追加された機能のうち、UI 上で変化が分かりやすく、共有デモに向いているものをまとめています。
+note 記事や検証メモと対応づけやすく、読者が迷いにくく、Git に不慣れでも扱いやすい構成にしています。
 
-## What this app demonstrates
+## Structure
 
-- Dynamic containers
-	- st.expander と st.popover で open/close を state として扱い、on_change で rerun できます。
-- Widget binding
-	- bind="query-params" により、widget の値を URL と双方向同期できます。
-- Clickable images
-	- st.image(..., link=...) で画像全体をリンクにできます。
-- Hidden pages
-	- st.Page(..., visibility="hidden") でナビゲーションに出さずにルーティングできます。
-- UI updates
-	- st.metric(..., delta_description=...)
-	- st.table(..., width=..., height=...)
+```text
+streamlit-update-demo/
+|-- v1_55/
+|-- v1_56/
+`-- v1_57/
+```
 
-## Pages
+## Versions
 
-- Overview
-	- 1.55.0 の主要機能を 1 ページで確認できます。
-- Dynamic Containers
-	- expander と popover の open/close state と rerun を体験できます。
-- Hidden Route
-	- navigation には表示されない page へ直接アクセスできます。
+- [v1_55/README.md](v1_55/README.md)
+  - Streamlit 1.55.0 の新機能デモ
+- [v1_56/README.md](v1_56/README.md)
+  - 追加予定
+- [v1_57/README.md](v1_57/README.md)
+  - 追加予定
 
-## Requirements
+## How to run
 
-- Python 3.12 以降
-- Streamlit 1.55.0
-
-## Local setup
+1 つのバージョンだけ動かしたいときは、そのフォルダの requirements を使って起動します。
 
 ```bash
-pip install -r requirements.txt
-streamlit run app.py
+pip install -r v1_55/requirements.txt
+streamlit run v1_55/app.py
 ```
 
-起動後はローカルブラウザで以下にアクセスします。
+## Why this layout
 
-```text
-http://localhost:8501
-```
-
-## Project structure
-
-```text
-.
-|-- app.py
-|-- pages/
-|   |-- overview.py
-|   |-- dynamic_containers.py
-|   `-- hidden_route.py
-`-- requirements.txt
-```
-
-## Notes
-
-- このデモは Streamlit 1.55.0 固有の API を使っています。
-- 1.54.x 以前では visibility、bind、link などの引数が使えず、起動時エラーになります。
+- note 記事やリリース記事と対応づけやすい
+- バージョン差分をフォルダ単位で追いやすい
+- 読者が今どの版を見ているか分かりやすい
+- 将来の v1_56 や v1_57 を追加しやすい
