@@ -121,7 +121,7 @@ with feature_col1:
         st.markdown("- 📈 セクタータイムの展開コントロール")
         st.markdown("- 🎯 ドライバー統計のポップオーバー")
         
-        st.page_link("pages/dynamic_containers.py", label="➡️ レース分析を見る", icon="📊")
+        st.page_link("v1_55/pages/dynamic_containers.py", label="➡️ レース分析を見る", icon="📊")
 
 with feature_col2:
     with st.container(border=True):
@@ -146,7 +146,7 @@ with feature_col2:
         st.markdown("- 🔗 設定URLの自動生成")
         st.markdown("- 📤 ワンクリックで状態共有")
         
-        st.page_link("pages/widget_binding.py", label="➡️ チーム設定を開く", icon="🔧")
+        st.page_link("v1_55/pages/widget_binding.py", label="➡️ チーム設定を開く", icon="🔧")
 
 st.divider()
 
@@ -211,7 +211,7 @@ with tech_col6:
         )
         st.caption("複数ドライバーをワンクリックで選択")
 
-st.page_link("pages/new_features.py", label="➡️ すべての機能を見る", icon="✨")
+st.page_link("v1_55/pages/new_features.py", label="➡️ すべての機能を見る", icon="✨")
 
 st.divider()
 
@@ -231,7 +231,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.page_link("pages/hidden_page.py", label="➡️ VIP Analyticsにアクセス", icon="👑")
+st.page_link("v1_55/pages/hidden_page.py", label="➡️ VIP Analyticsにアクセス", icon="👑")
 
 st.divider()
 
