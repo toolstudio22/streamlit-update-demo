@@ -1,5 +1,5 @@
 """
-Streamlit 1.55.0 新機能デモアプリ
+Streamlit 1.55.0 新機能デモアプリ - F1 Racing Analytics
 
 主な新機能：
 - Dynamic Containers (on_change + programmatic control)
@@ -15,41 +15,42 @@ Streamlit 1.55.0 新機能デモアプリ
 import streamlit as st
 
 st.set_page_config(
-    page_title="Streamlit 1.55.0 デモ",
-    page_icon="🎉",
+    page_title="F1 Racing Analytics | Streamlit 1.55.0",
+    page_icon="🏎️",
     layout="wide",
+    initial_sidebar_state="expanded",
 )
 
 # ナビゲーション設定
-overview = st.Page("pages/overview.py", title="概要", icon="🏠")
+overview = st.Page("pages/overview.py", title="🏁 Dashboard", icon="🏎️")
 dynamic_containers = st.Page(
     "pages/dynamic_containers.py",
-    title="Dynamic Containers",
-    icon="📦",
+    title="📊 Race Analytics",
+    icon="📈",
 )
 widget_binding = st.Page(
     "pages/widget_binding.py",
-    title="Widget Binding",
-    icon="🔗",
+    title="🔧 Team Settings",
+    icon="⚙️",
 )
 new_features = st.Page(
     "pages/new_features.py",
-    title="その他の新機能",
-    icon="✨",
+    title="✨ Advanced Features",
+    icon="🎯",
 )
 hidden_page = st.Page(
     "pages/hidden_page.py",
-    title="隠しページ",
-    icon="🕵️",
+    title="🔒 VIP Analytics",
+    icon="👑",
     visibility="hidden",  # ナビゲーションには表示されない
 )
 
 pg = st.navigation(
     {
-        "メイン": [overview],
-        "主要機能": [dynamic_containers, widget_binding],
-        "追加機能": [new_features],
-        "特殊": [hidden_page],
+        "🏎️ Main": [overview],
+        "📊 Analytics": [dynamic_containers, widget_binding],
+        "⚡ Features": [new_features],
+        "🔒 VIP": [hidden_page],
     }
 )
 
