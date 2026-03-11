@@ -24,7 +24,14 @@ streamlit-update-demo/
 
 ## How to run
 
-1 つのバージョンだけ動かしたいときは、そのフォルダの requirements を使って起動します。
+まずはルートから最新デモを起動できます。
+
+```bash
+pip install -r v1_55/requirements.txt
+streamlit run app.py
+```
+
+特定バージョンだけ直接動かしたいときは、そのフォルダの app.py を指定します。
 
 ```bash
 pip install -r v1_55/requirements.txt
