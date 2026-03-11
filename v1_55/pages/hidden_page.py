@@ -249,7 +249,7 @@ with access_tabs[0]:
         """
 # 他のページからこのVIPページへのリンク
 st.page_link(
-    "v1_55/pages/hidden_page.py",
+    "pages/hidden_page.py",
     label="VIP Analytics にアクセス",
     icon="👑"
 )
@@ -271,13 +271,13 @@ with access_tabs[2]:
     st.code(
         """
 if st.button("VIPページへ"):
-    st.switch_page("v1_55/pages/hidden_page.py")
+    st.switch_page("pages/hidden_page.py")
         """,
         language="python"
     )
     
     if st.button("🏁 ダッシュボードに戻る", type="primary", use_container_width=True):
-        st.switch_page("v1_55/pages/overview.py")
+        st.switch_page("pages/overview.py")
 
 st.divider()
 
@@ -348,13 +348,13 @@ st.markdown("### 🏁 他のページへ")
 nav_col1, nav_col2, nav_col3, nav_col4 = st.columns(4)
 
 with nav_col1:
-    st.page_link("v1_55/pages/overview.py", label="Dashboard", icon="🏎️")
+    st.page_link("pages/overview.py", label="Dashboard", icon="🏎️")
 
 with nav_col2:
-    st.page_link("v1_55/pages/dynamic_containers.py", label="Race Analytics", icon="📊")
+    st.page_link("pages/dynamic_containers.py", label="Race Analytics", icon="📊")
 
 with nav_col3:
-    st.page_link("v1_55/pages/widget_binding.py", label="Team Settings", icon="🔧")
+    st.page_link("pages/widget_binding.py", label="Team Settings", icon="🔧")
 
 with nav_col4:
-    st.page_link("v1_55/pages/new_features.py", label="Advanced Features", icon="✨")
+    st.page_link("pages/new_features.py", label="Advanced Features", icon="✨")
