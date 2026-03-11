@@ -22,24 +22,24 @@ st.set_page_config(
 )
 
 # ナビゲーション設定
-overview = st.Page("pages/overview.py", title="🏁 Dashboard", icon="🏎️")
+overview = st.Page("v1_55/pages/overview.py", title="🏁 Dashboard", icon="🏎️")
 dynamic_containers = st.Page(
-    "pages/dynamic_containers.py",
+    "v1_55/pages/dynamic_containers.py",
     title="📊 Race Analytics",
     icon="📈",
 )
 widget_binding = st.Page(
-    "pages/widget_binding.py",
+    "v1_55/pages/widget_binding.py",
     title="🔧 Team Settings",
     icon="⚙️",
 )
 new_features = st.Page(
-    "pages/new_features.py",
+    "v1_55/pages/new_features.py",
     title="✨ Advanced Features",
     icon="🎯",
 )
 hidden_page = st.Page(
-    "pages/hidden_page.py",
+    "v1_55/pages/hidden_page.py",
     title="🔒 VIP Analytics",
     icon="👑",
     visibility="hidden",  # ナビゲーションには表示されない
