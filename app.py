@@ -1,1 +1,47 @@
-from v1_55.app import *  # noqa: F401,F403
+"""
+Streamlit 1.55.0 新機能デモアプリ - F1 Racing Analytics
+エントリーポイント
+"""
+
+import streamlit as st
+
+st.set_page_config(
+    page_title="F1 Racing Analytics | Streamlit 1.55.0",
+    page_icon="🏎️",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+overview = st.Page("v1_55/pages/overview.py", title="🏁 Dashboard", icon="🏎️")
+dynamic_containers = st.Page(
+    "v1_55/pages/dynamic_containers.py",
+    title="📊 Race Analytics",
+    icon="📈",
+)
+widget_binding = st.Page(
+    "v1_55/pages/widget_binding.py",
+    title="🔧 Team Settings",
+    icon="⚙️",
+)
+new_features = st.Page(
+    "v1_55/pages/new_features.py",
+    title="✨ Advanced Features",
+    icon="🎯",
+)
+hidden_page = st.Page(
+    "v1_55/pages/hidden_page.py",
+    title="🔒 VIP Analytics",
+    icon="👑",
+    visibility="hidden",
+)
+
+pg = st.navigation(
+    {
+        "🏎️ Main": [overview],
+        "📊 Analytics": [dynamic_containers, widget_binding],
+        "⚡ Features": [new_features],
+        "🔒 VIP": [hidden_page],
+    }
+)
+
+pg.run()
